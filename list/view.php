@@ -9,16 +9,19 @@
 <body>
     <ul>
         <?php foreach($transactions as $key => $transaction): ?>
+            <!-- <?php $contact = getContactById($id) ?> -->
             <li>
                 <a href="../item?id=<?= $key ?>">
                     <?= $transaction['date']?>
                     <!-- <?= $contact['nom'] ?>
                     <?= $contact['prenom'] ?>
-                    <?= $contact['compte'] ?> -->
+                    <?= $contact['compte'] ?>  -->
                     <?= $transaction['montant'] ?>
                 </a>
             </li>
         <?php endforeach; ?>
     </ul>
+    <br>
+    <a href="../new">Crée une transactions </a>
 </body>
 </html>
