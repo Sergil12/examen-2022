@@ -21,6 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $date = test_input($_POST["date"]);
 
   echo "ta transaction a bien été envoyer!";
+
+  header('Location: ../list');
 }
 
 function test_input($data) {
@@ -29,8 +31,6 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-
-
 
 
 require('./view.php');

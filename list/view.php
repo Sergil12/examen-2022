@@ -9,15 +9,17 @@
 <body>
     <ul>
         <?php foreach($transactions as $key => $transaction): ?>
-            <!-- <?php $contact = getContactById($id) ?> -->
+             <?php $id = $transaction['emetteur'];
+              $contact = getContactById($id);?>
+        <!-- <?php $contacts = [
+        $id => getContactById($_POST['emetteur']),
+        $id => getContactById($_POST['destinataires']), ];?> -->
             <li>
-                <a href="../item?id=<?= $key ?>">
                     <?= $transaction['date']?>
-                    <!-- <?= $contact['nom'] ?>
+                    <?= $contact['nom'] ?>
                     <?= $contact['prenom'] ?>
-                    <?= $contact['compte'] ?>  -->
+                    <?= $contact['compte'] ?>
                     <?= $transaction['montant'] ?>
-                </a>
             </li>
         <?php endforeach; ?>
     </ul>
