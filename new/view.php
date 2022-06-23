@@ -7,14 +7,14 @@
     <title>formulaires</title>
 </head>
 <body>
-<form action="" enctype="multipart/form-data" method="POST">
+<form action="" enctype="multipart/form-data" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <br>
         <p>Crée une nouvelle transaction</p>
         <div>
             <label>
                destinataires 
             </label>
-            <select name="pets" id="pet-select">
+            <select name="destinataires">
                 <option value="">--choisir un destinataires--</option>
                 <option value="1">David Gilson</option>
                 <option value="2">Jonathan Arabia</option>
@@ -27,14 +27,14 @@
             <label>
                 Montant
             </label>
-            <input type="number" placeholder="1.0" step="0.01" min="0">
+            <input name="montant" placeholder="1.0" step="0.01" min="0">
         </div>
         <br>
         <div>
             <label>
                Date 
             </label>
-            <input type="date" value="2022-06-23" />
+            <input name="date" value="2022-06-23" />
         </div>
         <br>
         <div>
